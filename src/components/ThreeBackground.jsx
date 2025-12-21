@@ -1,5 +1,6 @@
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
+import * as THREE from 'three';
 
 // Simple Fallback Component using standard Three.js geometry
 const SimpleParticles = () => {
@@ -17,9 +18,23 @@ const SimpleParticles = () => {
         return pos;
     }, []);
 
-    useFrame((state) => {
-        mesh.current.rotation.y = state.clock.getElapsedTime() * 0.05;
-        mesh.current.rotation.x = state.clock.getElapsedTime() * 0.02;
+    useFrame((state, delta) => {
+        // Continuous rotation
+        mesh.current.rotation.z += delta * 0.05;
+
+        // Interactive Rotation (Parallax)
+        // Lerp towards mouse position for smooth follow effect
+        // state.pointer.x goes from -1 to 1
+        mesh.current.rotation.x = THREE.MathUtils.lerp(
+            mesh.current.rotation.x,
+            state.pointer.y * 0.2,
+            0.05
+        );
+        mesh.current.rotation.y = THREE.MathUtils.lerp(
+            mesh.current.rotation.y,
+            state.pointer.x * 0.2,
+            0.05
+        );
     });
 
     return (
@@ -48,7 +63,11 @@ const SimpleParticles = () => {
 const ThreeBackground = () => {
     return (
         <div className="fixed inset-0 -z-10 bg-[var(--bg-dark)] flex items-center justify-center">
-            <Canvas camera={{ position: [0, 0, 3] }}>
+            <Canvas
+                camera={{ position: [0, 0, 3] }}
+                eventSource={document.getElementById('root')}
+                eventPrefix="client"
+            >
                 <SimpleParticles />
             </Canvas>
         </div>
