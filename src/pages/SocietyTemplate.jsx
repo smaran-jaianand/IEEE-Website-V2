@@ -49,24 +49,41 @@ const SocietyTemplate = () => {
                         <span className="w-2 h-8 mr-4 rounded-full" style={{ backgroundColor: society.color }}></span>
                         About Us
                     </h2>
-                    <p className="text-xl text-gray-300 leading-relaxed font-light">
-                        The {society.name} at IEEE SIT Student Branch is committed to excellence in the field.
-                        We provide a platform for students to explore, innovate, and create. Through our various
-                        initiatives, we aim to bridge the gap between academic learning and industry requirements.
-                    </p>
+                    <div className="flex flex-col md:flex-row gap-8 items-center">
+                        <div className="flex-1">
+                            <p className="text-xl text-gray-300 leading-relaxed font-light">
+                                {society.description}
+                            </p>
+                        </div>
+                        {society.societyImage && (
+                            <div className="w-full md:w-1/3">
+                                <img
+                                    src={society.societyImage}
+                                    alt={`${society.name} Hero`}
+                                    className="rounded-xl w-full h-auto object-cover shadow-lg"
+                                />
+                            </div>
+                        )}
+                    </div>
                 </section>
 
                 {/* 2. Slate Members (Leadership) */}
                 <section>
                     <h2 className="text-3xl font-display font-bold text-white mb-8 text-center" style={{ textShadow: `0 0 20px ${society.color}40` }}>Executive Slate</h2>
+
+                    {/* Slate Image */}
+                    {society.slate?.image && (
+                        <div className="mb-10 max-w-2xl mx-auto">
+                            <img
+                                src={society.slate.image}
+                                alt={`${society.name} Executive Slate`}
+                                className="rounded-2xl w-full h-auto object-cover border border-white/10 shadow-2xl"
+                            />
+                        </div>
+                    )}
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                        {/* Mock Slate Data - Including Faculty Rep */}
-                        {[
-                            { role: 'Branch Counselor', name: 'Faculty Name' },
-                            { role: 'Chairperson', name: 'Student Name' },
-                            { role: 'Vice-Chair', name: 'Student Name' },
-                            { role: 'Secretary', name: 'Student Name' },
-                        ].map((member, i) => (
+                        {society.slate?.members?.map((member, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ borderColor: 'rgba(255,255,255,0.05)' }}
@@ -78,8 +95,12 @@ const SocietyTemplate = () => {
                                 transition={{ duration: 0.3 }}
                                 className="glass p-6 rounded-2xl text-center border-t border-transparent"
                             >
-                                <div className="w-20 h-20 mx-auto bg-white/5 rounded-full mb-4 flex items-center justify-center text-3xl">
-                                    {i === 0 ? '🎓' : '👤'}
+                                <div className="w-20 h-20 mx-auto bg-white/5 rounded-full mb-4 overflow-hidden flex items-center justify-center text-3xl">
+                                    {member.image ? (
+                                        <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                                    ) : (
+                                        i === 0 ? '🎓' : '👤'
+                                    )}
                                 </div>
                                 <h3 className="font-bold text-white text-lg leading-tight mb-1">{member.role}</h3>
                                 <p className="text-sm text-gray-400">{member.name}</p>
@@ -91,35 +112,51 @@ const SocietyTemplate = () => {
                 {/* 3. Activities Section */}
                 <section>
                     <h2 className="text-3xl font-display font-bold text-white mb-8 text-center">Our Activities</h2>
-                    <div className="space-y-4">
-                        {['Technical Workshop on AI', 'Industrial Visit to Tech Park', 'Guest Lecture Series'].map((activity, i) => (
-                            <div key={i} className="glass p-6 rounded-2xl flex flex-col md:flex-row md:items-center gap-6 hover:bg-white/5 transition-colors group border border-transparent hover:border-white/10">
-                                <div className="w-full md:w-32 h-32 bg-white/5 rounded-xl flex-shrink-0 flex items-center justify-center text-gray-500">
-                                    Activity Img
+                    {society.activities?.length > 0 ? (
+                        <div className="space-y-4">
+                            {society.activities.map((activity, i) => (
+                                <div key={i} className="glass p-6 rounded-2xl flex flex-col md:flex-row md:items-center gap-6 hover:bg-white/5 transition-colors group border border-transparent hover:border-white/10">
+                                    <div className="w-full md:w-32 h-32 bg-white/5 rounded-xl flex-shrink-0 overflow-hidden flex items-center justify-center text-gray-500">
+                                        {activity.image ? (
+                                            <img src={activity.image} alt={activity.title} className="w-full h-full object-cover" />
+                                        ) : (
+                                            'Activity Img'
+                                        )}
+                                    </div>
+                                    <div>
+                                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[var(--ieee-blue)] transition-colors">{activity.title}</h3>
+                                        <p className="text-gray-400">
+                                            {activity.description}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[var(--ieee-blue)] transition-colors">{activity}</h3>
-                                    <p className="text-gray-400">
-                                        A brief description of the activity goes here. It was an insightful session where students learned about key technologies.
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p className="text-center text-gray-500">No recent activities to show.</p>
+                    )}
                 </section>
 
                 {/* 4. Media Section */}
                 <section>
                     <h2 className="text-3xl font-display font-bold text-white mb-8 text-center">Gallery</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        {[1, 2, 3, 4, 5, 6].map((i) => (
-                            <div key={i} className="aspect-square bg-white/5 rounded-xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer border border-white/5">
-                                <div className="w-full h-full flex items-center justify-center text-gray-600">
-                                    Photo {i}
+                    {society.gallery?.length > 0 ? (
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            {society.gallery.map((imgSrc, i) => (
+                                <div key={i} className="aspect-square bg-white/5 rounded-xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer border border-white/5">
+                                    {imgSrc ? (
+                                        <img src={imgSrc} alt={`Gallery ${i + 1}`} className="w-full h-full object-cover" />
+                                    ) : (
+                                        <div className="w-full h-full flex items-center justify-center text-gray-600">
+                                            Photo {i + 1}
+                                        </div>
+                                    )}
                                 </div>
-                            </div>
-                        ))}
-                    </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p className="text-center text-gray-500">No images in gallery.</p>
+                    )}
                 </section>
 
             </div>
