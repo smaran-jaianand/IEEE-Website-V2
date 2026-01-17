@@ -1,4 +1,5 @@
 import { useParams, Navigate } from 'react-router-dom';
+import { Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { societies } from '../data/societiesData';
 
@@ -67,6 +68,40 @@ const SocietyTemplate = () => {
                     </div>
                 </section>
 
+                {/* 1.5 Vision & Mission */}
+                {(society.vision || society.mission) && (
+                    <section className="grid md:grid-cols-2 gap-8">
+                        {society.vision && (
+                            <div className="glass p-8 rounded-3xl border border-white/5 relative overflow-hidden group hover:bg-white/5 transition-colors">
+                                <div className="absolute top-0 right-0 p-8 opacity-10 text-6xl text-[var(--ieee-blue)] select-none pointer-events-none">
+                                    <span style={{ color: society.color }}>Target</span>
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
+                                    <span className="w-2 h-6 mr-3 rounded-full" style={{ backgroundColor: society.color }}></span>
+                                    Our Vision
+                                </h3>
+                                <p className="text-gray-300 leading-relaxed">
+                                    "{society.vision}"
+                                </p>
+                            </div>
+                        )}
+                        {society.mission && (
+                            <div className="glass p-8 rounded-3xl border border-white/5 relative overflow-hidden group hover:bg-white/5 transition-colors">
+                                <div className="absolute top-0 right-0 p-8 opacity-10 text-6xl text-[var(--ieee-blue)] select-none pointer-events-none">
+                                    <span style={{ color: society.color }}>Flag</span>
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
+                                    <span className="w-2 h-6 mr-3 rounded-full" style={{ backgroundColor: society.color }}></span>
+                                    Our Mission
+                                </h3>
+                                <p className="text-gray-300 leading-relaxed">
+                                    "{society.mission}"
+                                </p>
+                            </div>
+                        )}
+                    </section>
+                )}
+
                 {/* 2. Slate Members (Leadership) */}
                 <section>
                     <h2 className="text-3xl font-display font-bold text-white mb-8 text-center" style={{ textShadow: `0 0 20px ${society.color}40` }}>Executive Slate</h2>
@@ -103,7 +138,19 @@ const SocietyTemplate = () => {
                                     )}
                                 </div>
                                 <h3 className="font-bold text-white text-lg leading-tight mb-1">{member.role}</h3>
-                                <p className="text-sm text-gray-400">{member.name}</p>
+                                <p className="text-sm text-gray-400 mb-3">{member.name}</p>
+                                {member.linkedin && (
+                                    <a
+                                        href={member.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/5 hover:bg-[#0077b5] hover:text-white text-gray-400 transition-colors"
+                                        onClick={(e) => e.stopPropagation()}
+                                        title="Connect on LinkedIn"
+                                    >
+                                        <Linkedin size={16} />
+                                    </a>
+                                )}
                             </motion.div>
                         ))}
                     </div>
