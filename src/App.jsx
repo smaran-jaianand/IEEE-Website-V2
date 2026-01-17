@@ -8,7 +8,7 @@ import SocietyTemplate from './pages/SocietyTemplate';
 import Events from './pages/Events';
 import Media from './pages/Media';
 import Newsletter from './pages/Newsletter';
-import Preloader from './components/Preloader';
+import TerminalBoot from './components/TerminalBoot';
 import ThreeBackground from './components/ThreeBackground';
 import './App.css'
 
@@ -32,7 +32,7 @@ function App() {
       <ScrollToTop />
       <AnimatePresence mode="wait">
         {loading && (
-          <Preloader key="preloader" onFinish={() => setLoading(false)} />
+          <TerminalBoot key="terminal-boot" onFinish={() => setLoading(false)} />
         )}
       </AnimatePresence>
 

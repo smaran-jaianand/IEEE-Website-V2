@@ -11,7 +11,7 @@ The project has been completely overhauled (Design 2.0) to feature a premium **D
 *   **Dynamic Society Templates**: A single reusable template system for all 16+ technical societies/chapters.
 *   **Vertical Layout**: Clean, scrolling pages for each society (About → Slate → Activities → Gallery).
 *   **Responsive Navigation**: A modern "Floating Pill" navbar that adapts to scrolling.
-*   **Cinematic Preloader**: A smooth entrance animation simulating system initialization.
+*   **Cinematic Preloader**: A retro "Terminal Boot" sequence (`TerminalBoot.jsx`) with BIOS options and scrolling logs.
 
 ---
 
@@ -41,7 +41,7 @@ To effectively maintain and update this website, a developer should possess the 
 
 ### Advanced (For Core Features)
 5.  **Three.js / React Three Fiber**: Required if you plan to modify `ThreeBackground.jsx` (the 3D particle system) or add new 3D elements.
-6.  **Framer Motion**: Required to tweak the entrance animations, hover effects, or the Preloader.
+6.  **Framer Motion**: Required to tweak the entrance animations, hover effects, or the TerminalBoot sequence.
 
 ---
 
@@ -80,7 +80,7 @@ src/
 ├── components/        # Reusable UI components
 │   ├── Navbar.jsx     # Floating navigation bar
 │   ├── Footer.jsx     # Site footer
-│   ├── Preloader.jsx  # Initial loading screen
+│   ├── TerminalBoot.jsx # BIOS-style Boot Sequence
 │   └── ThreeBackground.jsx # 3D Particle System
 ├── data/
 │   └── societiesData.js # Configuration for all 16 societies (Name, Colors, IDs)

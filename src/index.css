@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;600;700&family=VT323&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -20,6 +20,7 @@
   /* Typography */
   --font-main: 'Outfit', system-ui, sans-serif;
   --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-terminal: 'VT323', monospace;
 
   /* Text Colors */
   --text-main: #e2e8f0;
