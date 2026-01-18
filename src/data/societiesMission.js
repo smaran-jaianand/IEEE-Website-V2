@@ -1,0 +1,16 @@
+export const societiesMission = {
+    sps: 'The Signal Processing Society is a dynamic organization that is the preeminent source of signal processing information and resources to a global community. We do this by: publishing high-quality scholarship; organizing conferences and workshops; providing educational resources; and promoting the value of signal processing to society.',
+    grss: 'To advance the theory, concepts, and techniques of science and engineering as they apply to the remote sensing of the earth, oceans, atmosphere, and space, as well as the processing, interpretation and dissemination of this information.',
+    sysc: 'The Systems Council integrates IEEE activities regarding aspects of multiple disciplines and specialty areas of systems engineering, and covers the technical activities of systems engineering, design, and analysis.',
+    comsoc: 'The IEEE Communications Society promotes the advancement of science, technology and applications in communications and related disciplines.',
+    embs: 'To serve the profession of biomedical engineering and society by providing opportunities for technical interaction, professional development, and community impact.',
+    vts: 'To advance the theory and practice of electrical and electronics engineering as it applies to the theoretical, experimental and operational aspects of electrical and electronic engineering in mobile radio and motor vehicles.',
+    cs: 'The IEEE Computer Society is the premier source for information, inspiration, and collaboration in computer science and engineering.',
+    ies: 'To advance the theory and practice of electronics, controls, communications, instrumentation, and computational intelligence in industrial and manufacturing systems and processes.',
+    wie: 'To facilitate the global recruitment and retention of women in technical disciplines globally.',
+    ras: 'To foster the development and facilitate the exchange of scientific and technological knowledge in robotics and automation that benefits members, the profession and humanity.',
+    aess: 'To provide a responsive and relevant forum for the exchange of technical information in aerospace and electronic systems.',
+    ntc: 'To advance and coordinate work in the field of Nanotechnology carried out throughout the IEEE in scientific, literary and educational areas.',
+    edsoc: 'To develop, maintain, and disseminate Best Practices in Engineering Education.',
+    hkn: 'To encourage and recognize excellence in the IEEE-designated fields of interest.',
+};

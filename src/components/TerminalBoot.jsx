@@ -128,17 +128,28 @@ const TerminalBoot = ({ onFinish }) => {
                 {phase === 'BIOS' && (
                     <div className="flex flex-col gap-4 mt-12 mb-auto">
                         <div className="mb-6">Please select a boot option:</div>
-                        {options.map((opt, index) => (
-                            <div
-                                key={index}
-                                className={`flex items-center gap-4 cursor-pointer hover:opacity-100 transition-opacity ${selectedOption === index ? 'bg-[#00aaff] text-black px-2' : 'opacity-70 hover:bg-[#00aaff] hover:text-black hover:px-2'}`}
-                                onClick={() => handleSelection(opt.action)}
-                                onMouseEnter={() => setSelectedOption(index)}
-                            >
-                                <span className="w-4">{selectedOption === index ? '>' : ' '}</span>
-                                <span>{opt.label}</span>
-                            </div>
-                        ))}
+                        <div className="flex flex-col gap-4 w-full">
+                            {options.map((opt, index) => (
+                                <button
+                                    key={index}
+                                    className={`
+                                        relative w-full px-6 py-2 uppercase font-[VT323] text-xl outline-none transition-all text-left
+                                        border-t-2 border-l-2 border-b-2 border-r-2
+                                        ${selectedOption === index
+                                            ? 'border-t-[#004466] border-l-[#004466] border-b-[#66ccff] border-r-[#66ccff] bg-[#00aaff] text-black translate-y-[2px]'
+                                            : 'border-t-[#66ccff] border-l-[#66ccff] border-b-[#004466] border-r-[#004466] bg-black text-[#00aaff] hover:bg-[#002233]'
+                                        }
+                                    `}
+                                    onClick={() => handleSelection(opt.action)}
+                                    onMouseEnter={() => setSelectedOption(index)}
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <span className={`w-3 ${selectedOption === index ? 'opacity-100' : 'opacity-0'}`}>{'>'}</span>
+                                        <span>{opt.label}</span>
+                                    </div>
+                                </button>
+                            ))}
+                        </div>
 
                         <div className="mt-12 text-sm opacity-50">
                             [UP/DOWN] to navigate • [ENTER] to select

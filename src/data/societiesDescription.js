@@ -1,0 +1,16 @@
+export const societiesDescription = {
+    sps: 'SPS is the world’s premier association for signal processing engineers and industry professionals.',
+    grss: 'GRSS fosters engagement in periodic publications, conferences, professional activities and networking to share technical information about geoscience and remote sensing.',
+    sysc: 'The IEEE Systems Council focuses on the engineering and management of complex systems.',
+    comsoc: 'The Communications Society focuses on the advancement of communication technologies. We organize events related to networking, wireless communication, and signal processing to prepare students for the telecommunications industry.',
+    embs: 'EMBS is the world’s largest international society of biomedical engineers.',
+    vts: 'VTS is concerned with the theoretical, experimental, and operational aspects of electrical and electronic engineering in mobile radio and motor vehicles.',
+    cs: 'The Computer Society at IEEE SIT is a community of students passionate about computing and technology. We aim to foster knowledge sharing and skill development through workshops, hackathons, and seminars. Join us to explore the cutting edge of computer science.',
+    ies: 'IES focuses on the theory and applications of electronics, controls, communications, instrumentation, and computational intelligence.',
+    wie: 'WIE is the largest international professional organization dedicated to promoting women engineers and scientists.',
+    ras: 'RAS focuses on the theory and practice of robotics and automation engineering and science.',
+    aess: 'AESS deals with the organization, systems engineering, design, development, integration, and operation of complex systems for space, air, ocean, or ground environments.',
+    ntc: 'The IEEE Nanotechnology Council advances the theory and application of nanotechnology.',
+    edsoc: 'The IEEE Education Society is dedicated to the theory and practice of education and educational technology involved in the effective delivery of technical information.',
+    hkn: 'IEEE-Eta Kappa Nu is the student honor society of IEEE and is dedicated to encouraging and recognizing excellence in the IEEE-designated fields of interest.',
+};

@@ -1,0 +1,16 @@
+export const societiesVision = {
+    sps: 'To be the premier global technical society in the signal processing area.',
+    grss: 'To be the leading global technical society in geoscience and remote sensing.',
+    sysc: 'To be the primary global resource for systems engineering and systems thinking.',
+    comsoc: 'To be the premier international organization for the exchange of ideas on communications and information networking technologies.',
+    embs: 'To benefit humanity by advancing medicine and biology through the application of engineering sciences and technology.',
+    vts: 'To be the leading resource for mobility and vehicular technology systems.',
+    cs: 'To be the leading provider of technical information, community services, and personalized services to the world’s computing professionals.',
+    ies: 'To be a global leader in industrial electronics technology.',
+    wie: 'A vibrant community of IEEE women and men internationally using their diverse talents to innovate for the benefit of humanity.',
+    ras: 'To be the most recognized and respected global organization in robotics and automation.',
+    aess: 'To be the premier society for the aerospace and electronic systems community.',
+    ntc: 'To be a driving force in the realization of the full potential of nanotechnology.',
+    edsoc: 'To be a global leader in engineering education.',
+    hkn: 'To be the premier honor society for engineering and science professionals.',
+};
