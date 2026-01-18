@@ -7,7 +7,7 @@ import { societyActivities } from './societiesActivities';
 import { societyGallery } from './societiesGallery';
 
 const societyIds = [
-    'sps', 'grss', 'sysc', 'comsoc', 'embs', 'vts', 'cs',
+    'sps', 'grss', 'cass', 'ias', 'sysc', 'comsoc', 'embs', 'vts', 'cs',
     'ies', 'wie', 'ras', 'aess', 'ntc', 'edsoc', 'hkn'
 ];
 

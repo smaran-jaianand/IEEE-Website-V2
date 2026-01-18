@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ChevronRight, Calendar, Users, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { societies } from '../data/societiesData';
+import { studentBranch } from '../data/studentBranch';
 
 const Home = () => {
     return (
@@ -11,14 +12,6 @@ const Home = () => {
                 {/* Hero Section */}
                 <section className="relative min-h-screen flex items-center justify-center text-center px-4 pt-20">
                     <div className="relative z-10 max-w-5xl mx-auto">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="mb-6 inline-block px-4 py-1.5 rounded-full glass border-none bg-white/5 text-sm font-medium text-[var(--ieee-blue)]"
-                        >
-                            Symbiosis Institute of Technology
-                        </motion.div>
 
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}
@@ -74,6 +67,82 @@ const Home = () => {
                                 <p className="text-gray-400">{stat.label}</p>
                             </motion.div>
                         ))}
+                    </div>
+                </section>
+
+                {/* About IEEE SBC */}
+                <section className="relative py-20 z-10 overflow-hidden">
+                    <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="flex-1"
+                        >
+                            <h2 className="text-4xl font-display font-bold text-white mb-6">
+                                About IEEE SBC at <br />
+                                <span className="text-gradient-primary">Symbiosis Hyderabad</span>
+                            </h2>
+                            <p className="text-gray-300 leading-relaxed mb-6 text-lg">
+                                The IEEE Student Branch at Symbiosis Institute of Technology, Hyderabad, is a vibrant community of technology enthusiasts. We are dedicated to fostering technical innovation, professional development, and collaborative learning among students. Through workshops, seminars, and projects, we aim to bridge the gap between academic learning and industry requirements.
+                            </p>
+                            <Link to="/about" className="text-[var(--ieee-blue)] font-bold hover:underline inline-flex items-center group">
+                                Learn More <ChevronRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="flex-1 w-full"
+                        >
+                            <div className="relative aspect-video rounded-2xl overflow-hidden glass border border-white/10 group">
+                                <div className="absolute inset-0 bg-[var(--ieee-blue)]/20 group-hover:bg-transparent transition-colors z-10"></div>
+                                <img
+                                    src="/images/general/about-sbc.jpg"
+                                    alt="IEEE SBC Team"
+                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center z-0 bg-[#0f1522]">
+                                    <span className="text-gray-600">About SBC Image Placeholder</span>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </section>
+
+                {/* Core Team / ExeCom */}
+                <section className="relative py-24 bg-[var(--bg-dark)] z-10">
+                    <div className="max-w-7xl mx-auto px-4">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Executive Committee</h2>
+                            <div className="w-24 h-1 bg-[var(--ieee-blue)] mx-auto rounded-full"></div>
+                            <p className="mt-4 text-gray-400">The core team driving our vision forward.</p>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                            {studentBranch.map((member, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: i * 0.1 }}
+                                    whileHover={{ y: -5 }}
+                                    className="glass p-6 rounded-2xl text-center border-t border-transparent hover:border-[var(--ieee-blue)] transition-colors"
+                                >
+                                    <div className="w-24 h-24 mx-auto bg-white/5 rounded-full mb-4 overflow-hidden flex items-center justify-center text-3xl">
+                                        {member.image ? (
+                                            <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                                        ) : (
+                                            '🎓'
+                                        )}
+                                    </div>
+                                    <h3 className="font-bold text-white text-lg leading-tight mb-1 min-h-[3rem] items-center flex justify-center">{member.name}</h3>
+                                    <p className="text-sm text-gray-400">{member.role}</p>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </section>
 

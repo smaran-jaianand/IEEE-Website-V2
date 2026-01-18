@@ -13,6 +13,20 @@ export const societiesInfo = {
         icon: 'Globe',
         societyImage: '/images/societies/hero/grss.jpg',
     },
+    cass: {
+        name: 'Circuits and Systems Society',
+        shortName: 'CASS',
+        color: '#7FB539',
+        icon: 'Cpu',
+        societyImage: '/images/societies/hero/cass.jpg',
+    },
+    ias: {
+        name: 'Industry Applications Society',
+        shortName: 'IAS',
+        color: '#A11E22',
+        icon: 'Factory',
+        societyImage: '/images/societies/hero/ias.jpg',
+    },
     sysc: {
         name: 'Systems Council',
         shortName: 'SysC',

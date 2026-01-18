@@ -1,5 +1,7 @@
 export const societiesDescription = {
     sps: 'SPS is the world’s premier association for signal processing engineers and industry professionals.',
+    cass: 'The IEEE Circuits and Systems Society is the leading organization for sustainable development and innovation of circuits and systems.',
+    ias: 'The IEEE Industry Applications Society is dedicated to the advancement of the theory and practice of electrical and electronic engineering in the development, design, manufacture and application of electrical systems.',
     grss: 'GRSS fosters engagement in periodic publications, conferences, professional activities and networking to share technical information about geoscience and remote sensing.',
     sysc: 'The IEEE Systems Council focuses on the engineering and management of complex systems.',
     comsoc: 'The Communications Society focuses on the advancement of communication technologies. We organize events related to networking, wireless communication, and signal processing to prepare students for the telecommunications industry.',

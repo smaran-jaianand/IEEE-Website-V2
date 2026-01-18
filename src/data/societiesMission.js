@@ -1,5 +1,7 @@
 export const societiesMission = {
     sps: 'The Signal Processing Society is a dynamic organization that is the preeminent source of signal processing information and resources to a global community. We do this by: publishing high-quality scholarship; organizing conferences and workshops; providing educational resources; and promoting the value of signal processing to society.',
+    cass: 'To foster the creation, development, and dissemination of knowledge in the theory, analysis, design, and implementation of circuits and systems.',
+    ias: 'To enable the advancement of theory and practice in the design, development, manufacturing and application of safe, sustainable, reliable, smart electrical systems, equipment and services.',
     grss: 'To advance the theory, concepts, and techniques of science and engineering as they apply to the remote sensing of the earth, oceans, atmosphere, and space, as well as the processing, interpretation and dissemination of this information.',
     sysc: 'The Systems Council integrates IEEE activities regarding aspects of multiple disciplines and specialty areas of systems engineering, and covers the technical activities of systems engineering, design, and analysis.',
     comsoc: 'The IEEE Communications Society promotes the advancement of science, technology and applications in communications and related disciplines.',

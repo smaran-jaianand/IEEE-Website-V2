@@ -1,5 +1,7 @@
 export const societiesVision = {
     sps: 'To be the premier global technical society in the signal processing area.',
+    cass: 'To be the global leader in circuits and systems.',
+    ias: 'To be a world leader in the advancement of technology and dissemination of technical information to support industry professionals.',
     grss: 'To be the leading global technical society in geoscience and remote sensing.',
     sysc: 'To be the primary global resource for systems engineering and systems thinking.',
     comsoc: 'To be the premier international organization for the exchange of ideas on communications and information networking technologies.',

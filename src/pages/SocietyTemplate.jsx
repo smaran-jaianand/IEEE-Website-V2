@@ -137,8 +137,8 @@ const SocietyTemplate = () => {
                                         i === 0 ? '🎓' : '👤'
                                     )}
                                 </div>
-                                <h3 className="font-bold text-white text-lg leading-tight mb-1">{member.role}</h3>
-                                <p className="text-sm text-gray-400 mb-3">{member.name}</p>
+                                <h3 className="font-bold text-white text-lg leading-tight mb-1">{member.name}</h3>
+                                <p className="text-sm text-gray-400 mb-3">{member.role}</p>
                                 {member.linkedin && (
                                     <a
                                         href={member.linkedin}
