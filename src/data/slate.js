@@ -1,16 +1,12 @@
 export const societySlates = {
     sps: {
-        image: '/images/societies/slate/sps.jpg',
         members: [
-            { name: 'Student Name', role: 'Chairperson', image: '/images/societies/slate/chairperson/sps.jpg' },
-            { name: 'Student Name', role: 'Vice-Chair', image: '/images/societies/slate/vice/sps.jpg' },
-            { name: 'Student Name', role: 'Secretary', image: '/images/societies/slate/secretary/sps.jpg' },
-            { name: 'Student Name', role: 'Treasurer', image: '/images/societies/slate/treasurer/sps.jpg' },
-            { name: 'Student Name', role: 'Content Lead', image: '/images/societies/slate/content/sps.jpg' },
+            { name: 'Vinay Chakravarthy Addanki', role: 'Chairperson', image: '/images/societies/slate/chairperson/sps.jpg' },
+            { name: 'Dr. Dhruba jyoti bora', role: 'Faculty Advisor', image: '/images/societies/slate/faculty/sps.jpg' },
         ]
     },
     grss: {
-        image: '/images/societies/slate/grss.jpg',
+
         members: [
             { name: 'Smaran Jaianand', role: 'Chairperson', image: '/images/societies/slate/chairperson/grss.jpg' },
             { name: 'Zakuir Rahman', role: 'Vice-Chair', image: '/images/societies/slate/vice/grss.jpg' },
@@ -20,7 +16,7 @@ export const societySlates = {
         ]
     },
     cass: {
-        image: '/images/societies/slate/cass.jpg',
+
         members: [
             { name: 'Nikitha Pendlimadugu', role: 'Chairperson', image: '/images/societies/slate/chairperson/cass.jpg' },
             { name: 'Kolipaka Sathya Prasad', role: 'Vice-Chair', image: '/images/societies/slate/vice/cass.jpg' },
@@ -30,7 +26,7 @@ export const societySlates = {
         ]
     },
     ias: {
-        image: '/images/societies/slate/ias.jpg',
+
         members: [
             { name: 'Md Meraj Ansari', role: 'Chairperson', image: '/images/societies/slate/chairperson/ias.jpg' },
             { name: 'Vrishab Cherukula', role: 'Vice-Chair', image: '/images/societies/slate/vice/ias.jpg' },
@@ -40,17 +36,13 @@ export const societySlates = {
         ]
     },
     sysc: {
-        image: '/images/societies/slate/sysc.jpg',
         members: [
-            { name: 'Student Name', role: 'Chairperson', image: '/images/societies/slate/chairperson/sysc.jpg' },
-            { name: 'Student Name', role: 'Vice-Chair', image: '/images/societies/slate/vice/sysc.jpg' },
-            { name: 'Student Name', role: 'Secretary', image: '/images/societies/slate/secretary/sysc.jpg' },
-            { name: 'Student Name', role: 'Treasurer', image: '/images/societies/slate/treasurer/sysc.jpg' },
-            { name: 'Student Name', role: 'Content Lead', image: '/images/societies/slate/content/sysc.jpg' },
+            { name: 'Krish kumar prajapati', role: 'Chairperson', image: '/images/societies/slate/chairperson/sysc.jpg' },
+            { name: 'Dr. G Suryanarayan', role: 'Faculty Advisor', image: '/images/societies/slate/faculty/sysc.jpg' },
         ]
     },
     comsoc: {
-        image: '/images/societies/slate/comsoc.jpg',
+
         members: [
             { name: 'Sri Charan Rao', role: 'Chairperson', image: '/images/societies/slate/chairperson/comsoc.jpg' },
             { name: 'Anwita Rudravaram', role: 'Vice-Chair', image: '/images/societies/slate/vice/comsoc.jpg' },
@@ -60,27 +52,23 @@ export const societySlates = {
         ]
     },
     embs: {
-        image: '/images/societies/slate/embs.jpg',
+
         members: [
             { name: 'Sujay Indupuru', role: 'Chairperson', image: '/images/societies/slate/chairperson/embs.jpg' },
             { name: 'Mannan', role: 'Vice-Chair', image: '/images/societies/slate/vice/embs.jpg' },
-            { name: 'Nitin', role: 'Secretary', image: '/images/societies/slate/secretary/embs.jpg' },
+            { name: 'Nitin', role: 'Secretary', role: 'Secretary', image: '/images/societies/slate/secretary/embs.jpg' },
             { name: 'Samarth Agarwal', role: 'Treasurer', image: '/images/societies/slate/treasurer/embs.jpg' },
             { name: 'Dr. Rajanikanth Aluvalu', role: 'Faculty Advisor', image: '/images/societies/slate/faculty/embs.jpg' },
         ]
     },
     vts: {
-        image: '/images/societies/slate/vts.jpg',
         members: [
-            { name: 'Student Name', role: 'Chairperson', image: '/images/societies/slate/chairperson/vts.jpg' },
-            { name: 'Student Name', role: 'Vice-Chair', image: '/images/societies/slate/vice/vts.jpg' },
-            { name: 'Student Name', role: 'Secretary', image: '/images/societies/slate/secretary/vts.jpg' },
-            { name: 'Student Name', role: 'Treasurer', image: '/images/societies/slate/treasurer/vts.jpg' },
-            { name: 'Student Name', role: 'Content Lead', image: '/images/societies/slate/content/vts.jpg' },
+            { name: 'Sreesainadh', role: 'Chairperson', image: '/images/societies/slate/chairperson/vts.jpg' },
+            { name: 'Dr. Somula Ramasubba Reddy', role: 'Faculty Advisor', image: '/images/societies/slate/faculty/vts.jpg' },
         ]
     },
     cs: {
-        image: '/images/societies/slate/cs.jpg',
+
         members: [
             { name: 'Ravi Partha Sarathi Gunda', role: 'Chairperson', image: '/images/societies/slate/chairperson/cs.jpg' },
             { name: 'Varshith Goud', role: 'Vice-Chair', image: '/images/societies/slate/vice/cs.jpg' },
@@ -90,7 +78,7 @@ export const societySlates = {
         ]
     },
     ies: {
-        image: '/images/societies/slate/ies.jpg',
+
         members: [
             { name: 'Ghana Sai Reddy Kodumuru', role: 'Chairperson', image: '/images/societies/slate/chairperson/ies.jpg' },
             { name: 'Laxmi Chandrahaas Donthula', role: 'Vice-Chair', image: '/images/societies/slate/vice/ies.jpg' },
@@ -100,17 +88,14 @@ export const societySlates = {
         ]
     },
     wie: {
-        image: '/images/societies/slate/wie.jpg',
         members: [
-            { name: 'Student Name', role: 'Chairperson', image: '/images/societies/slate/chairperson/wie.jpg' },
-            { name: 'Student Name', role: 'Vice-Chair', image: '/images/societies/slate/vice/wie.jpg' },
-            { name: 'Student Name', role: 'Secretary', image: '/images/societies/slate/secretary/wie.jpg' },
-            { name: 'Student Name', role: 'Treasurer', image: '/images/societies/slate/treasurer/wie.jpg' },
-            { name: 'Student Name', role: 'Content Lead', image: '/images/societies/slate/content/wie.jpg' },
+            { name: 'Meenakshi', role: 'Chairperson', image: '/images/societies/slate/chairperson/wie.jpg' },
+            { name: 'Kumar Harini', role: 'Vice-Chair', image: '/images/societies/slate/vice/wie.jpg' },
+            { name: 'Dr. Kranthi Kumar Singamaneni', role: 'Faculty Advisor', image: '/images/societies/slate/faculty/wie.jpg' },
         ]
     },
     ras: {
-        image: '/images/societies/slate/ras.jpg',
+
         members: [
             { name: 'Pratapagiri Karthik', role: 'Chairperson', image: '/images/societies/slate/chairperson/ras.jpg' },
             { name: 'Pragya Choubey', role: 'Vice-Chair', image: '/images/societies/slate/vice/ras.jpg' },
@@ -120,7 +105,7 @@ export const societySlates = {
         ]
     },
     aess: {
-        image: '/images/societies/slate/aess.jpg',
+
         members: [
             { name: 'K. Venkatesh', role: 'Chairperson', image: '/images/societies/slate/chairperson/aess.jpg' },
             { name: 'Tanishq Singh Sisodiya', role: 'Vice-Chair', image: '/images/societies/slate/vice/aess.jpg' },
@@ -130,7 +115,7 @@ export const societySlates = {
         ]
     },
     ntc: {
-        image: '/images/societies/slate/ntc.jpg',
+
         members: [
             { name: 'Subhrayoti Samal', role: 'Chairperson', image: '/images/societies/slate/chairperson/ntc.jpg' },
             { name: 'Zakuir', role: 'Vice-Chair', image: '/images/societies/slate/vice/ntc.jpg' },
@@ -140,7 +125,7 @@ export const societySlates = {
         ]
     },
     edsoc: {
-        image: '/images/societies/slate/edsoc.jpg',
+
         members: [
             { name: 'Varshitha Munnuru', role: 'Chairperson', image: '/images/societies/slate/chairperson/edsoc.jpg' },
             { name: 'Parvini Gupta', role: 'Vice-Chair', image: '/images/societies/slate/vice/edsoc.jpg' },
@@ -150,13 +135,6 @@ export const societySlates = {
         ]
     },
     hkn: {
-        image: '/images/societies/slate/hkn.jpg',
-        members: [
-            { name: 'Student Name', role: 'Chairperson', image: '/images/societies/slate/chairperson/hkn.jpg' },
-            { name: 'Student Name', role: 'Vice-Chair', image: '/images/societies/slate/vice/hkn.jpg' },
-            { name: 'Student Name', role: 'Secretary', image: '/images/societies/slate/secretary/hkn.jpg' },
-            { name: 'Student Name', role: 'Treasurer', image: '/images/societies/slate/treasurer/hkn.jpg' },
-            { name: 'Student Name', role: 'Content Lead', image: '/images/societies/slate/content/hkn.jpg' },
-        ]
+        members: []
     },
 };

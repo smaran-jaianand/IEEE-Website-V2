@@ -117,15 +117,17 @@ const SocietyTemplate = () => {
                         </div>
                     )}
 
+                    {/* Branch Leaders (2 Top) */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                         {society.slate?.members?.map((member, i) => (
                             <motion.div
                                 key={i}
-                                initial={{ borderColor: 'rgba(255,255,255,0.05)' }}
+                                initial={{ borderColor: 'transparent' }}
                                 whileHover={{
                                     y: -5,
-                                    borderColor: society.color,
-                                    backgroundColor: 'rgba(255,255,255,0.1)'
+                                    borderColor: 'transparent',
+                                    backgroundColor: 'rgba(255,255,255,0.1)',
+                                    boxShadow: `0 0 20px ${society.color}80`
                                 }}
                                 transition={{ duration: 0.3 }}
                                 className="glass p-6 rounded-2xl text-center border-t border-transparent"
@@ -154,6 +156,8 @@ const SocietyTemplate = () => {
                             </motion.div>
                         ))}
                     </div>
+
+
                 </section>
 
                 {/* 3. Activities Section */}
@@ -162,7 +166,15 @@ const SocietyTemplate = () => {
                     {society.activities?.length > 0 ? (
                         <div className="space-y-4">
                             {society.activities.map((activity, i) => (
-                                <div key={i} className="glass p-6 rounded-2xl flex flex-col md:flex-row md:items-center gap-6 hover:bg-white/5 transition-colors group border border-transparent hover:border-white/10">
+                                <div
+                                    key={i}
+                                    className="glass p-6 rounded-2xl flex flex-col md:flex-row md:items-center gap-6 hover:bg-white/5 transition-all duration-300 group border border-transparent"
+                                    style={{
+                                        '--glow-color': society.color,
+                                    }}
+                                    onMouseEnter={(e) => e.currentTarget.style.boxShadow = `0 0 20px ${society.color}60`}
+                                    onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
+                                >
                                     <div className="w-full md:w-32 h-32 bg-white/5 rounded-xl flex-shrink-0 overflow-hidden flex items-center justify-center text-gray-500">
                                         {activity.image ? (
                                             <img src={activity.image} alt={activity.title} className="w-full h-full object-cover" />
@@ -190,7 +202,12 @@ const SocietyTemplate = () => {
                     {society.gallery?.length > 0 ? (
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                             {society.gallery.map((imgSrc, i) => (
-                                <div key={i} className="aspect-square bg-white/5 rounded-xl overflow-hidden hover:opacity-80 transition-opacity cursor-pointer border border-white/5">
+                                <div
+                                    key={i}
+                                    className="aspect-square bg-white/5 rounded-xl overflow-hidden hover:opacity-100 transition-all duration-300 cursor-pointer border border-transparent"
+                                    onMouseEnter={(e) => e.currentTarget.style.boxShadow = `0 0 20px ${society.color}60`}
+                                    onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'none'}
+                                >
                                     {imgSrc ? (
                                         <img src={imgSrc} alt={`Gallery ${i + 1}`} className="w-full h-full object-cover" />
                                     ) : (

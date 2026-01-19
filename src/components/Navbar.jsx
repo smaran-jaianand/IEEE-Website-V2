@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Zap } from 'lucide-react';
 import { societies } from '../data/societiesData';
+import { societySlates } from '../data/slate';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -76,16 +77,33 @@ const Navbar = () => {
                                             className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-64 rounded-xl border border-[rgba(255,255,255,0.1)] shadow-2xl overflow-hidden bg-[#05070a]"
                                         >
                                             <div className="py-2 max-h-[60vh] overflow-y-auto custom-scrollbar">
-                                                {societies.map((society) => (
-                                                    <Link
-                                                        key={society.id}
-                                                        to={`/society/${society.id}`}
-                                                        className="block px-5 py-3.5 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors border-l-4 border-transparent hover:border-[var(--ieee-blue)]"
-                                                    >
-                                                        <span className="font-bold block tracking-wide">{society.shortName}</span>
-                                                        <span className="text-[10px] text-gray-500 font-normal uppercase tracking-wider">{society.name}</span>
-                                                    </Link>
-                                                ))}
+                                                {societies.map((society) => {
+                                                    const slate = societySlates[society.id];
+                                                    const hasSlate = slate?.members && slate.members.length > 0;
+
+                                                    if (hasSlate) {
+                                                        return (
+                                                            <Link
+                                                                key={society.id}
+                                                                to={`/society/${society.id}`}
+                                                                className="block px-5 py-3.5 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors border-l-4 border-transparent hover:border-[var(--ieee-blue)]"
+                                                            >
+                                                                <span className="font-bold block tracking-wide">{society.shortName}</span>
+                                                                <span className="text-[10px] text-gray-500 font-normal uppercase tracking-wider">{society.name}</span>
+                                                            </Link>
+                                                        );
+                                                    } else {
+                                                        return (
+                                                            <div
+                                                                key={society.id}
+                                                                className="block px-5 py-3.5 text-sm text-gray-600 cursor-not-allowed border-l-4 border-transparent"
+                                                            >
+                                                                <span className="font-bold block tracking-wide">{society.shortName}</span>
+                                                                <span className="text-[10px] text-gray-700 font-normal uppercase tracking-wider">Coming Soon</span>
+                                                            </div>
+                                                        );
+                                                    }
+                                                })}
                                             </div>
                                         </motion.div>
                                     )}
@@ -129,15 +147,31 @@ const Navbar = () => {
 
                         <div className="px-4 py-2 text-sm font-bold text-[var(--ieee-blue)]">Societies</div>
                         <div className="grid grid-cols-2 gap-2 px-4 mb-4">
-                            {societies.map((society) => (
-                                <Link
-                                    key={society.id}
-                                    to={`/society/${society.id}`}
-                                    className="text-xs text-gray-400 hover:text-white py-1"
-                                >
-                                    {society.shortName}
-                                </Link>
-                            ))}
+                            {societies.map((society) => {
+                                const slate = societySlates[society.id];
+                                const hasSlate = slate?.members && slate.members.length > 0;
+
+                                if (hasSlate) {
+                                    return (
+                                        <Link
+                                            key={society.id}
+                                            to={`/society/${society.id}`}
+                                            className="text-xs text-gray-400 hover:text-white py-1"
+                                        >
+                                            {society.shortName}
+                                        </Link>
+                                    );
+                                } else {
+                                    return (
+                                        <span
+                                            key={society.id}
+                                            className="text-xs text-gray-700 cursor-not-allowed py-1"
+                                        >
+                                            {society.shortName}
+                                        </span>
+                                    );
+                                }
+                            })}
                         </div>
 
                         <Link to="/events" className="block px-4 py-3 font-bold text-white hover:bg-white/5 rounded-lg">Events</Link>
