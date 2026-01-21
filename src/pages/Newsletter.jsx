@@ -1,66 +1,8 @@
-import { Mail, X, BookOpen, Download } from 'lucide-react';
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
-const PDFModal = ({ isOpen, onClose, pdfUrl, title }) => {
-    if (!isOpen) return null;
-
-    return (
-        <AnimatePresence>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
-                onClick={onClose}
-            >
-                <motion.div
-                    initial={{ scale: 0.9, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.9, opacity: 0 }}
-                    className="relative w-full max-w-6xl h-[90vh] bg-gray-900 rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col"
-                    onClick={(e) => e.stopPropagation()}
-                >
-                    <div className="flex items-center justify-between p-4 border-b border-white/10 bg-gray-900/50 backdrop-blur-md">
-                        <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                            <BookOpen className="text-[var(--ieee-blue)]" size={20} />
-                            {title}
-                        </h3>
-                        <div className="flex items-center gap-2">
-                            <a
-                                href={pdfUrl}
-                                download
-                                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-                                title="Download PDF"
-                            >
-                                <Download size={20} />
-                            </a>
-                            <button
-                                onClick={onClose}
-                                className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-                            >
-                                <X size={24} />
-                            </button>
-                        </div>
-                    </div>
-                    <div className="flex-1 bg-gray-800">
-                        <iframe
-                            src={pdfUrl}
-                            className="w-full h-full"
-                            title="PDF Reader"
-                        />
-                    </div>
-                </motion.div>
-            </motion.div>
-        </AnimatePresence>
-    );
-};
-
+import { Mail, BookOpen } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { newslettersData } from '../data/newslettersData';
 
 const Newsletter = () => {
-    const [selectedPdf, setSelectedPdf] = useState(null);
-
     // Using imported data from ../data/newslettersData.js
     const newsletters = newslettersData;
 
@@ -104,27 +46,19 @@ const Newsletter = () => {
                                 {item.description}
                             </p>
 
-                            <button
-                                onClick={() => setSelectedPdf(item)}
+                            <a
+                                href={item.pdfLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="w-full py-3 rounded-xl bg-[var(--ieee-blue)]/10 text-[var(--ieee-blue)] font-bold border border-[var(--ieee-blue)]/20 hover:bg-[var(--ieee-blue)] hover:text-white transition-all flex items-center justify-center gap-2 group-hover:shadow-[0_0_20px_rgba(0,98,155,0.4)]"
                             >
                                 <BookOpen size={18} />
                                 Read Now
-                            </button>
+                            </a>
                         </div>
                     </motion.div>
                 ))}
             </div>
-
-            {/* PDF Modal */}
-            {selectedPdf && (
-                <PDFModal
-                    isOpen={!!selectedPdf}
-                    onClose={() => setSelectedPdf(null)}
-                    pdfUrl={selectedPdf.pdfLink}
-                    title={`${selectedPdf.title} - ${selectedPdf.version} ${selectedPdf.issue}`}
-                />
-            )}
 
             {/* Subscription Box - Hidden for now */}
             {/* 

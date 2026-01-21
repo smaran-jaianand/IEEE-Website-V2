@@ -11,7 +11,18 @@ const Home = () => {
             <div className="w-full overflow-x-hidden relative">
 
                 {/* Hero Section */}
-                <section className="relative min-h-screen flex items-center justify-center text-center px-4 pt-20">
+                <section className="relative min-h-screen flex items-center justify-center text-center px-4 pt-20 overflow-hidden">
+                    {/* Hero Background Image */}
+                    <div className="absolute top-[5px] bottom-[5px] left-[6px] right-[6px] z-0 rounded-3xl overflow-hidden border border-white/10">
+                        <img
+                            src="/images/hero/grppic.jpg"
+                            alt="Hero Background"
+                            className="w-full h-full object-cover"
+                        />
+                        {/* Overlay to ensure text readability */}
+                        <div className="absolute inset-0 bg-black/60"></div>
+                    </div>
+
                     <div className="relative z-10 max-w-5xl mx-auto">
 
                         <motion.h1
@@ -101,13 +112,13 @@ const Home = () => {
                             <div className="relative aspect-video rounded-2xl overflow-hidden glass border border-white/10 group">
                                 <div className="absolute inset-0 bg-[var(--ieee-blue)]/20 group-hover:bg-transparent transition-colors z-10"></div>
                                 <img
-                                    src="/images/general/about-sbc.jpg"
+                                    src="/images/hero/sitieee.png"
                                     alt="IEEE SBC Team"
                                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                                 />
-                                <div className="absolute inset-0 flex items-center justify-center z-0 bg-[#0f1522]">
+                                {/* <div className="absolute inset-0 flex items-center justify-center z-0 bg-[#0f1522]">
                                     <span className="text-gray-600">About SBC Image Placeholder</span>
-                                </div>
+                                </div> */}
                             </div>
                         </motion.div>
                     </div>
@@ -128,14 +139,14 @@ const Home = () => {
                                 {
                                     name: 'Dr. Rajanikanth Aluvalu',
                                     role: 'Branch Counsellor',
-                                    image: '/images/societies/slate/faculty/cs.jpg',
+                                    image: '/images/societies/slate/advisor/director.jpg',
                                     message: 'Guiding the next generation of technical leaders.',
                                     linkedin: '#'
                                 },
                                 {
                                     name: 'Mr. Sai Prashanth Mallellu',
                                     role: 'Branch Advisor',
-                                    image: '/images/societies/slate/faculty/aess.jpg',
+                                    image: '/images/societies/slate/advisor/sai.jpeg',
                                     message: 'Mentoring students to achieve professional excellence.',
                                     linkedin: '#'
                                 }
