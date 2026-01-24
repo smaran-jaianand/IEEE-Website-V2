@@ -46,10 +46,7 @@ const Navbar = () => {
 
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2 group flex-shrink-0">
-                        <div className="bg-[var(--ieee-blue)] p-1.5 rounded-lg group-hover:shadow-[0_0_20px_rgba(0,98,155,0.5)] transition-shadow">
-                            <Zap size={20} className="text-white" />
-                        </div>
-                        <span className="font-display font-bold text-lg tracking-wider text-white">IEEE SIT SB</span>
+                        <img src="/images/logo.png" alt="IEEE SIT SB" className="h-10 w-auto" />
                     </Link>
 
                     {/* Desktop Menu */}

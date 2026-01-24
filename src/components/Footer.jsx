@@ -29,9 +29,8 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-white">Connect</h4>
                         <div className="flex gap-4">
-                            <a href="#" className="bg-white/5 p-3 rounded-full hover:bg-[var(--ieee-blue)] hover:text-white transition-all transform hover:-translate-y-1"><Instagram size={20} /></a>
-                            <a href="#" className="bg-white/5 p-3 rounded-full hover:bg-[var(--ieee-blue)] hover:text-white transition-all transform hover:-translate-y-1"><Linkedin size={20} /></a>
-                            <a href="#" className="bg-white/5 p-3 rounded-full hover:bg-[var(--ieee-blue)] hover:text-white transition-all transform hover:-translate-y-1"><Github size={20} /></a>
+                            <a href="#" onClick={(e) => e.preventDefault()} className="bg-white/5 p-3 rounded-full opacity-50 pointer-events-none hover:bg-[var(--ieee-blue)] hover:text-white transition-all transform hover:-translate-y-1"><Instagram size={20} /></a>
+                            <a href="#" onClick={(e) => e.preventDefault()} className="bg-white/5 p-3 rounded-full opacity-50 pointer-events-none hover:bg-[var(--ieee-blue)] hover:text-white transition-all transform hover:-translate-y-1"><Linkedin size={20} /></a>
                         </div>
                     </div>
                 </div>

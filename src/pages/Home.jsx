@@ -172,17 +172,7 @@ const Home = () => {
                                             <p className="text-gray-200 italic mb-8 leading-relaxed text-lg">
                                                 "{member.message}"
                                             </p>
-                                            {member.linkedin && (
-                                                <a
-                                                    href={member.linkedin}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white text-[var(--ieee-blue)] hover:bg-[var(--ieee-blue)] hover:text-white transition-all transform hover:scale-110 shadow-lg"
-                                                    title="Connect on LinkedIn"
-                                                >
-                                                    <Linkedin size={24} />
-                                                </a>
-                                            )}
+
                                         </div>
                                     </div>
                                 </div>
@@ -213,17 +203,7 @@ const Home = () => {
                                             <p className="text-gray-200 italic mb-6 leading-relaxed text-sm">
                                                 "{member.message}"
                                             </p>
-                                            {member.linkedin && (
-                                                <a
-                                                    href={member.linkedin}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-[var(--ieee-blue)] hover:bg-[var(--ieee-blue)] hover:text-white transition-all transform hover:scale-110 shadow-lg"
-                                                    title="Connect on LinkedIn"
-                                                >
-                                                    <Linkedin size={20} />
-                                                </a>
-                                            )}
+
                                         </div>
                                     </div>
                                 </div>

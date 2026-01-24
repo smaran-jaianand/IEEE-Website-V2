@@ -7,9 +7,9 @@ const Events = () => {
                 <div className="inline-block p-4 rounded-full bg-white/5 mb-6">
                     <span className="text-3xl">🗓️</span>
                 </div>
-                <h2 className="text-2xl font-bold text-white mb-4">Calendar Updating...</h2>
+                <h2 className="text-2xl font-bold text-white mb-4">Page Under Construction</h2>
                 <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                    We are currently curating an exciting lineup of workshops and seminars for the upcoming semester. Check back soon!
+                    Our code monkeys are working hard to bring you the latest events. Please come back later!
                 </p>
                 <div className="mt-10 flex justify-center gap-2">
                     <div className="w-2 h-2 bg-[var(--ieee-blue)] rounded-full animate-pulse"></div>
